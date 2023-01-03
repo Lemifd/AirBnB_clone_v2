@@ -19,7 +19,6 @@
 
   <BODY>
     <HEADER></HEADER>
-
     <MAIN>
       <DIV class="container">
         <SECTION class="filters" role="search">
@@ -27,8 +26,9 @@
             <H3>States</H3>
             <H4>&nbsp;</H4>
             <DIV class="popover">
+
 							<UL>
-              {% for state in states.values()|sort(attribute="name") %}
+		{% for state in states.values()|sort(attribute="name") %}
                 <LI><STRONG>{{ state.name }}</STRONG>
                   <UL>
                   {% for city in state.cities|sort(attribute="name") %}
@@ -68,6 +68,7 @@
               </DIV>
               <DIV class="number_rooms">
                 <I class="fa fa-bed fa-3x" aria-hidden="true"></I>
+
                 <BR>{{ place.number_rooms }} Rooms
               </DIV>
               <DIV class="number_bathrooms">
