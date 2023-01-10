@@ -19,6 +19,7 @@ app = Flask(__name__)
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 
+@app.route('/number_odd_or_even/')
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
